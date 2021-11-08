@@ -13,6 +13,7 @@
 		574BDA3C273839E500D180C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574BDA3B273839E500D180C1 /* Preview Assets.xcassets */; };
 		574BDA4627383B1400D180C1 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BDA4527383B1400D180C1 /* Framework.swift */; };
 		574BDA4827383B8000D180C1 /* FrameworksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BDA4727383B8000D180C1 /* FrameworksListView.swift */; };
+		57F6A7E6273931ED00E6E770 /* SelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6A7E5273931ED00E6E770 /* SelectionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		574BDA3D273839E500D180C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		574BDA4527383B1400D180C1 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		574BDA4727383B8000D180C1 /* FrameworksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksListView.swift; sourceTree = "<group>"; };
+		57F6A7E5273931ED00E6E770 /* SelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				574BDA36273839E300D180C1 /* ContentView.swift */,
 				574BDA4727383B8000D180C1 /* FrameworksListView.swift */,
+				57F6A7E5273931ED00E6E770 /* SelectionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F6A7E6273931ED00E6E770 /* SelectionRow.swift in Sources */,
 				574BDA37273839E300D180C1 /* ContentView.swift in Sources */,
 				574BDA4627383B1400D180C1 /* Framework.swift in Sources */,
 				574BDA35273839E300D180C1 /* ListSelectionApp.swift in Sources */,

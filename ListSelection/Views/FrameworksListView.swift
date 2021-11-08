@@ -9,12 +9,12 @@ import SwiftUI
 
 struct FrameworksListView: View {
     
-    @State var selection: UUID?
+    @Binding var selection: String?
     
     var body: some View {
         List(selection: $selection) {
-            ForEach(Framework.frameworks, id:\.id) { framework in
-                Text("\(framework.name)")
+            ForEach(Framework.frameworks, id:\.self) { framework in
+                SelectionRow(framework: framework, selection: $selection)
             }
         }
     }
@@ -22,7 +22,7 @@ struct FrameworksListView: View {
 
 struct FrameworksListView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworksListView()
+        FrameworksListView(selection: .constant("UIKit"))
             .previewLayout(.sizeThatFits)
     }
 }

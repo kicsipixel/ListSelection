@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Framework: Identifiable {
-    let id = UUID()
-    let name: String
+struct Framework: Identifiable, Hashable {
+    var id = UUID()
+    var name: String
 }
 
 extension Framework {

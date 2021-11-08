@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var selection: String?
+    
     var body: some View {
         NavigationView {
             VStack {
                 
                 List {
                     NavigationLink(
-                        destination: FrameworksListView(),
+                        destination: FrameworksListView(selection: $selection),
                         label: {
                             Text("Favorite Framework")
                         })
@@ -23,12 +26,12 @@ struct ContentView: View {
                 .listStyle(PlainListStyle())
                 
                 DisclosureGroup(
-                    content: { Text("Content") },
+                    content: { Text(selection ?? "N/A") },
                     label: { Text("Choosen framework") }
                 )
                 .padding()
                 
-               Spacer()
+                Spacer()
             }
             .navigationTitle("Favorites")
         }
