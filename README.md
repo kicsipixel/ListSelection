@@ -1,5 +1,5 @@
 # List selection
 
-Check the @State and @Bindigs...
+Check the @State and @Bindings...
 
 ![](README.png)
