@@ -26,8 +26,18 @@ struct ContentView: View {
                 .listStyle(PlainListStyle())
                 
                 DisclosureGroup(
-                    content: { Text(selection ?? "N/A") },
-                    label: { Text("Choosen framework") }
+                    content: {
+                        Text(selection ?? "You haven't selected anything from the list yet.")
+                            .font(.footnote)
+                            .padding()
+                    },
+                    label: {
+                        HStack {
+                            Text("Choosen framework")
+                            Spacer()
+                            Text(selection ?? "")
+                        }
+                    }
                 )
                 .padding()
                 
