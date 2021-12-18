@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var selection: String?
+    @State var selectionArray: Set<Framework> = []
+    
     
     var body: some View {
         NavigationView {
@@ -17,13 +19,18 @@ struct ContentView: View {
                 
                 List {
                     NavigationLink(
-                        destination: FrameworksListView(selection: $selection),
+                        destination: FrameworksListView(selection: $selection, selectionArray: $selectionArray),
                         label: {
                             Text("Favorite Framework")
                         })
                 }
                 .frame(maxHeight: UIScreen.main.bounds.height * 0.1)
                 .listStyle(PlainListStyle())
+                
+                ForEach(Array(selectionArray)) { framework in
+                    Text("\(framework.name)")
+                }
+                
                 
                 DisclosureGroup(
                     content: {
@@ -39,7 +46,7 @@ struct ContentView: View {
                         }
                     }
                 )
-                .padding()
+                    .padding()
                 
                 Spacer()
             }

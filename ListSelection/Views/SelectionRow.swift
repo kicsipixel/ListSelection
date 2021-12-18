@@ -11,6 +11,7 @@ struct SelectionRow: View {
     
     let framework: Framework
     @Binding var selection: String?
+    @Binding var selectionArray: Set<Framework>
     
     var body: some View {
         HStack {
@@ -25,12 +26,16 @@ struct SelectionRow: View {
         .contentShape(Rectangle())
         .onTapGesture {
             self.selection = framework.name
+            selectionArray.insert(framework)
+            print(selectionArray.count)
         }
     }
 }
 
+/*
 struct SelectionRow_Previews: PreviewProvider {
     static var previews: some View {
         SelectionRow(framework: Framework(name: "NoName"), selection: .constant("NoName"))
     }
 }
+*/
