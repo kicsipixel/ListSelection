@@ -19,23 +19,26 @@ struct SelectionRow: View {
             
             Spacer()
             
-            if framework.name == selection {
+            if framework.name == selection || selectionArray.contains(framework) {
                 Image(systemName: "checkmark")
             }
         }
         .contentShape(Rectangle())
         .onTapGesture {
-            self.selection = framework.name
-            selectionArray.insert(framework)
-            print(selectionArray.count)
+            if selectionArray.contains(framework) {
+                selectionArray.remove(framework)
+            } else {
+                self.selection = framework.name
+                selectionArray.insert(framework)
+            }
         }
     }
 }
 
-/*
+
 struct SelectionRow_Previews: PreviewProvider {
     static var previews: some View {
-        SelectionRow(framework: Framework(name: "NoName"), selection: .constant("NoName"))
+        SelectionRow(framework: Framework(name: "NoName"), selection: .constant("NoName"), selectionArray: .constant(Framework.dummyFrameworksForPreview))
     }
 }
-*/
+

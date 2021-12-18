@@ -19,4 +19,6 @@ extension Framework {
         Framework(name: "Cloud Kit"),
         Framework(name: "SwiftUI"),
     ]
+    
+    static let dummyFrameworksForPreview: Set<Framework> = [Framework(name: "UIKit")]
 }

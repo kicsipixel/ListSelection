@@ -21,11 +21,11 @@ struct FrameworksListView: View {
     }
 }
 
-/*
+
 struct FrameworksListView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworksListView(selection: .constant("UIKit"), selectionArray: ["UIKit"])
+        FrameworksListView(selection: .constant("UIKit"), selectionArray: .constant(Framework.dummyFrameworksForPreview))
             .previewLayout(.sizeThatFits)
     }
 }
-*/
+
